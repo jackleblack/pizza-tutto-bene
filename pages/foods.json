@@ -1,0 +1,604 @@
+[
+  {
+    "Name": "Chavignole",
+    "type": "classic",
+    "Description": "Suce tomate,mozzarella, jambon cru,tomates confites,crottin de chèvre de la chèvre rie du vallon (plan des pennes)noix,miel",
+    "prices": {
+      "solo": "12.00",
+      "standard": "14.50",
+      "maxi": "16.50"
+    }
+  },
+  {
+    "Name": "Anchois",
+    "type": "classic",
+    "Description": "",
+    "prices": {
+      "solo": "6.00",
+      "standard": "8.50",
+      "maxi": "11.00"
+    }
+  },
+  {
+    "Name": "Fromage",
+    "type": "classic",
+    "Description": "",
+    "prices": {
+      "solo": "6.50",
+      "standard": "9.00",
+      "maxi": "11.50"
+    }
+  },
+  {
+    "Name": "Royale",
+    "type": "classic",
+    "Description": "Jambon,champignons,emmental",
+    "prices": {
+      "solo": "8.00",
+      "standard": "10.50",
+      "maxi": "13.00"
+    }
+  },
+  {
+    "Name": "Poivrons",
+    "type": "classic",
+    "Description": "Poivrons,emmental",
+    "prices": {
+      "solo": "7.00",
+      "standard": "10.00",
+      "maxi": "12.50"
+    }
+  },
+  {
+    "Name": "Mozza jambon",
+    "type": "classic",
+    "Description": "Jambon,mozzarella,emmental",
+    "prices": {
+      "solo": "8.00",
+      "standard": "10.50",
+      "maxi": "13.00"
+    }
+  },
+  {
+    "Name": "Mozza champignons",
+    "type": "classic",
+    "Description": "Champignons,mozzarella,emmental",
+    "prices": {
+      "solo": "8.00",
+      "standard": "10.50",
+      "maxi": "13.00"
+    }
+  },
+  {
+    "Name": "Roquefort",
+    "type": "classic",
+    "Description": "Roquefort,emmental",
+    "prices": {
+      "solo": "8.00",
+      "standard": "10.50",
+      "maxi": "13.00"
+    }
+  },
+  {
+    "Name": "Chèvre",
+    "type": "classic",
+    "Description": "Chèvre,emmental",
+    "prices": {
+      "solo": "8.00",
+      "standard": "10.50",
+      "maxi": "13.00"
+    }
+  },
+  {
+    "Name": "Brousse",
+    "type": "classic",
+    "Description": "Brousse,emmental",
+    "prices": {
+      "solo": "8.00",
+      "standard": "10.50",
+      "maxi": "13.00"
+    }
+  },
+  {
+    "Name": "Thon",
+    "type": "classic",
+    "Description": "Thon,emmentale",
+    "prices": {
+      "solo": "8.00",
+      "standard": "10.50",
+      "maxi": "13.00"
+    }
+  },
+  {
+    "Name": "Chorizo",
+    "type": "classic",
+    "Description": "Chorizo,emmental",
+    "prices": {
+      "solo": "8.50",
+      "standard": "11.00",
+      "maxi": "13.50"
+    }
+  },
+  {
+    "Name": "Figatelli",
+    "type": "classic",
+    "Description": "Figatelli,emmental",
+    "prices": {
+      "solo": "8.50",
+      "standard": "11.00",
+      "maxi": "13.50"
+    }
+  },
+  {
+    "Name": "Merguez",
+    "type": "classic",
+    "Description": "Merguez,emmental",
+    "prices": {
+      "solo": "8.50",
+      "standard": "11.00",
+      "maxi": "13.50"
+    }
+  },
+  {
+    "Name": "Oignons",
+    "type": "classic",
+    "Description": "Oignons,emmental",
+    "prices": {
+      "solo": "7.00",
+      "standard": "9.50",
+      "maxi": "12.00"
+    }
+  },
+  {
+    "Name": "Jambon",
+    "type": "classic",
+    "Description": "Jambon,emmental",
+    "prices": {
+      "solo": "7.00",
+      "standard": "9.50",
+      "maxi": "12.00"
+    }
+  },
+  {
+    "Name": "Champignon",
+    "type": "classic",
+    "Description": "Champignons,emmental",
+    "prices": {
+      "solo": "7.00",
+      "standard": "9.50",
+      "maxi": "12.00"
+    }
+  },
+  {
+    "Name": "Pissaladiere",
+    "type": "classic",
+    "Description": "Crème,oignons,anchois,emmental",
+    "prices": {
+      "solo": "7.50",
+      "standard": "10.00",
+      "maxi": "12.50"
+    }
+  },
+  {
+    "Name": "Mozzarella",
+    "type": "classic",
+    "Description": "Mozzarella,emmental",
+    "prices": {
+      "solo": "7.50",
+      "standard": "10.00",
+      "maxi": "12.50"
+    }
+  },
+  {
+    "Name": "Figabrousse",
+    "type": "sauce",
+    "Description": "Figatelli,brousse,emmental",
+    "prices": {
+      "solo": "9.00",
+      "standard": "11.50",
+      "maxi": "14.00"
+    }
+  },
+  {
+    "Name": "Brousse Jambon",
+    "type": "sauce",
+    "Description": "Jambon,brousse,emmental",
+    "prices": {
+      "solo": "8.50",
+      "standard": "11.50",
+      "maxi": "14.00"
+    }
+  },
+  {
+    "Name": "4 Fromages",
+    "type": "sauce",
+    "Description": "Au choix",
+    "prices": {
+      "solo": "9.00",
+      "standard": "11.50",
+      "maxi": "14.00"
+    }
+  },
+  {
+    "Name": "Provençale",
+    "type": "sauce",
+    "Description": "Tomates fraîches,mozzarella,sauce basilic,emmental",
+    "prices": {
+      "solo": "9.00",
+      "standard": "11.50",
+      "maxi": "14.00"
+    }
+  },
+  {
+    "Name": "Orientale",
+    "type": "sauce",
+    "Description": "Poivrons,oignons,merguez,harissa,emmental",
+    "prices": {
+      "solo": "9.50",
+      "standard": "12.00",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Marseillaise",
+    "type": "sauce",
+    "Description": "Tomates fraîches,jambon,mozzarella,moutarde,emmental",
+    "prices": {
+      "solo": "9.50",
+      "standard": "12.00",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Aubergine",
+    "type": "sauce",
+    "Description": "Aubergines,parmesan,mozzarella,emmental",
+    "prices": {
+      "solo": "9.50",
+      "standard": "12.00",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Végétarienne",
+    "type": "sauce",
+    "Description": "Oignons,poivrons,aubergines,emmental",
+    "prices": {
+      "solo": "9.50",
+      "standard": "12.00",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Marina",
+    "type": "sauce",
+    "Description": "Tomates fraîches,lardons,œuf,mozzarella,emmental",
+    "prices": {
+      "solo": "10.00",
+      "standard": "12.50",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Basquaise",
+    "type": "sauce",
+    "Description": "Poulet,oignons,poivrons,emmental",
+    "prices": {
+      "solo": "10.00",
+      "standard": "12.50",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Arménienne",
+    "type": "sauce",
+    "Description": "Viande,oignons,poivrons",
+    "prices": {
+      "solo": "10.50",
+      "standard": "13.00",
+      "maxi": "15.00"
+    }
+  },
+  {
+    "Name": "La Romaine",
+    "type": "sauce",
+    "Description": "Mozzarella,tomates cerises,copeaux parmesan,roquette,sauce basilic,balsamique",
+    "prices": {
+      "solo": "11.50",
+      "standard": "13.50",
+      "maxi": "15.50"
+    }
+  },
+  {
+    "Name": "Fermière",
+    "type": "cream",
+    "Description": "Oignons,lardons,emmental",
+    "prices": {
+      "solo": "8.50",
+      "standard": "11.00",
+      "maxi": "13.50"
+    }
+  },
+  {
+    "Name": "Baltique",
+    "type": "cream",
+    "Description": "Saumon,emmental",
+    "prices": {
+      "solo": "9.00",
+      "standard": "11.50",
+      "maxi": "14.00"
+    }
+  },
+  {
+    "Name": "Pennoise",
+    "type": "cream",
+    "Description": "Jambon,œuf,mozzarella,emmental",
+    "prices": {
+      "solo": "9.00",
+      "standard": "11.50",
+      "maxi": "14.00"
+    }
+  },
+  {
+    "Name": "Paysanne",
+    "type": "cream",
+    "Description": "Champignons,chèvre,oignons,emmental",
+    "prices": {
+      "solo": "10.00",
+      "standard": "12.50",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Pizzaïolo",
+    "type": "cream",
+    "Description": "Champignons,thon,œuf,mozzarella,emmental",
+    "prices": {
+      "solo": "9.50",
+      "standard": "12.00",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Tartiflette",
+    "type": "cream",
+    "Description": "Reblochon,lardons,oignons,pomme de terre,emmental",
+    "prices": {
+      "solo": "10.00",
+      "standard": "12.50",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Foie gras",
+    "type": "cream",
+    "Description": "Foie gras,emmental",
+    "prices": {
+      "solo": "10.50",
+      "standard": "12.50",
+      "maxi": "15.00"
+    }
+  },
+  {
+    "Name": "Poulet Champignons",
+    "type": "cream",
+    "Description": "Poulet,champignons,emmental",
+    "prices": {
+      "solo": "10.00",
+      "standard": "12.50",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Kebab",
+    "type": "cream",
+    "Description": "Kebab en lamelles,oignons,emmental",
+    "prices": {
+      "solo": "10.00",
+      "standard": "12.50",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Crevettes",
+    "type": "cream",
+    "Description": "Crevettes,sauce basilic,emmental",
+    "prices": {
+      "solo": "10.00",
+      "standard": "12.50",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "La Seguin",
+    "type": "cream",
+    "Description": "Lardons,chèvre,miel,emmental",
+    "prices": {
+      "solo": "10.00",
+      "standard": "12.50",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "La Cannibale",
+    "type": "cream",
+    "Description": "Steack haché,oignons,œuf,emmental",
+    "prices": {
+      "solo": "10.00",
+      "standard": "12.50",
+      "maxi": "14.50"
+    }
+  },
+  {
+    "Name": "Napolitain",
+    "type": "calzone",
+    "Description": "Brousse,jambon,mozzarella,emmental",
+    "prices": {
+      "solo": "8.50",
+      "standard": "11.50",
+      "maxi": "13.50"
+    }
+  },
+  {
+    "Name": "Royal",
+    "type": "calzone",
+    "Description": "Jambon,champignons,mozzarella,emmental",
+    "prices": {
+      "solo": "8.50",
+      "standard": "11.50",
+      "maxi": "13.50"
+    }
+  },
+  {
+    "Name": "4 Fromages",
+    "type": "calzone",
+    "Description": "Au choix",
+    "prices": {
+      "solo": "8.50",
+      "standard": "11.50",
+      "maxi": "13.50"
+    }
+  },
+  {
+    "Name": "Pennois",
+    "type": "calzone",
+    "Description": "Crème,jambon,mozzarella,oeuf",
+    "prices": {
+      "solo": "8.50",
+      "standard": "11.50",
+      "maxi": "13.50"
+    }
+  },
+  {
+    "Name": "Océan",
+    "type": "calzone",
+    "Description": "Crème,champignons,thon,mozzarella",
+    "prices": {
+      "solo": "8.50",
+      "standard": "11.50",
+      "maxi": "13.50"
+    }
+  },
+  {
+    "Name": "Veritable margharita",
+    "type": "new",
+    "Description": "Sauce tomate ,mozzarella di buffala campana,basilic frais, huile d'olive",
+    "prices": {
+      "solo": "10.50",
+      "standard": "13.00",
+      "maxi": "15.00"
+    }
+  },
+  {
+    "Name": "La toscane",
+    "type": "new",
+    "Description": "Tomates confites,copeaux de parmesan,mozza di buffala,sauce basilic,reduction balsamique",
+    "prices": {
+      "solo": "10.50",
+      "standard": "13.00",
+      "maxi": "15.00"
+    }
+  },
+  {
+    "Name": "La texane",
+    "type": "new",
+    "Description": "Sauce barbecue,poulet,mozza,oeuf",
+    "prices": {
+      "solo": "10.50",
+      "standard": "13.00",
+      "maxi": "15.00"
+    }
+  },
+  {
+    "Name": "Savoureuse",
+    "type": "new",
+    "Description": "Crème au fromage ail et fines herbes,saumon,mozza",
+    "prices": {
+      "solo": "10.50",
+      "standard": "13.00",
+      "maxi": "15.00"
+    }
+  },
+  {
+    "Name": "Cloche d'or",
+    "type": "new",
+    "Description": "Mozza di buffala,copeaux de parmesan,jambon cru,sauce basilic",
+    "prices": {
+      "solo": "10.50",
+      "standard": "13.00",
+      "maxi": "15.00"
+    }
+  },
+  {
+    "Name": "L'indienne",
+    "type": "new",
+    "Description": "Creme,poulet,mozza,curry",
+    "prices": {
+      "solo": "10.50",
+      "standard": "13.00",
+      "maxi": "15.00"
+    }
+  },
+  {
+    "Name": "La parma",
+    "type": "new",
+    "Description": "Crème,aubergine,copeaux de parmesan,mozza,jambon cru,sauce basilic",
+    "prices": {
+      "solo": "10.50",
+      "standard": "13.00",
+      "maxi": "15.00"
+    }
+  },
+  {
+    "Name": "Super romaine",
+    "type": "new",
+    "Description": "Sauce tomate,emmental,roquette,tomates cerises,parmesan,basilic ,boule mozza fraiche 125g,balsamique",
+    "prices": {
+      "solo": "13.00",
+      "standard": "15.50",
+      "maxi": "17.50"
+    }
+  },
+  {
+    "Name": "Tiramisu Nutella",
+    "type": "dessert",
+    "Description": "2 personnes",
+    "prices": "5.50"
+  },
+  {
+    "Name": "Cheesecake",
+    "type": "dessert",
+    "Description": "",
+    "prices": "3"
+  },
+  {
+    "Name": "Tarte au Daim",
+    "type": "dessert",
+    "Description": "Rosé",
+    "prices": "3"
+  },
+  {
+    "Name": "Sodas",
+    "type": "drink",
+    "Description": "Rouge",
+    "prices": {
+      "33CL": "1",
+      "1.5L": "3"
+    }
+  },
+  {
+    "Name": "Vins",
+    "type": "drink",
+    "Description": "Rosé",
+    "prices": {
+      "75CL": "5",
+      "1.5L": "5"
+    }
+  },
+  {
+    "Name": "Bière La Cagole",
+    "type": "drink",
+    "Description": "Bière du cabanon",
+    "prices": "3"
+  }
+]
