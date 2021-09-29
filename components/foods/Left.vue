@@ -21,198 +21,58 @@
       </div>
     </div> -->
     <!-- end header -->
-    <!-- categories -->
+    <!-- Types -->
     <div class="flex flex-row px-5 mt-5">
-      <span class="px-5 py-1 mr-4 text-sm text-white bg-yellow-500 rounded-2xl">
-        All items
+      <span
+        class="px-5 py-1 mr-4 text-sm font-semibold cursor-pointer  rounded-2xl hover:bg-yellow-400 hover:text-white"
+        :class="{ 'bg-yellow-500 text-white': 'all' === filterType }"
+        @click="updateFilterType('all')"
+      >
+        Tous
       </span>
       <span
-        v-for="foodCategory in foodCategories"
-        :key="foodCategory"
-        class="px-5 py-1 mr-4 text-sm font-semibold rounded-2xl"
+        v-for="foodType in foodTypes"
+        :key="foodType"
+        class="px-5 py-1 mr-4 text-sm font-semibold cursor-pointer  rounded-2xl hover:bg-yellow-400 hover:text-white"
+        :class="{ 'bg-yellow-500 text-white': foodType === filterType }"
+        @click="updateFilterType(foodType)"
       >
-        {{ foodCategory }}
+        {{ foodType }}
       </span>
     </div>
-    <!-- end categories -->
+    <!-- end Types -->
     <!-- products -->
     <div class="grid grid-cols-3 gap-4 px-5 mt-5 overflow-y-auto h-3/4">
       <div
-        class="flex flex-col justify-between h-32 px-3 py-3 border border-gray-200 rounded-md "
+        v-for="(food, index) in foodByType"
+        :key="index"
+        class="flex flex-col justify-between h-40 px-3 py-3 bg-gray-100 rounded rounded-md shadow-lg "
       >
         <div>
-          <div class="font-bold text-gray-800">Griled corn</div>
-          <span class="text-sm font-light text-gray-400">150g</span>
+          <div class="font-bold text-gray-800">{{ food.name }}</div>
+          <span
+            class="h-4 overflow-hidden text-xs font-light text-gray-400  overflow-ellipsis"
+            >{{ food.description }}</span
+          >
         </div>
         <div class="flex flex-row items-center justify-between">
-          <span class="self-end text-lg font-bold text-yellow-500">$1.75</span>
-          <img
-            src="https://source.unsplash.com/sc5sTPMrVfk/600x600"
-            class="object-cover rounded-md h-14 w-14"
-            alt=""
-          />
+          <div
+            v-for="(price, variant) in food.prices"
+            :key="price"
+            class="flex flex-col p-2 text-yellow-500 bg-white cursor-pointer  rounded-2xl group hover:bg-yellow-500"
+          >
+            <span
+              class="text-xs font-semibold text-yellow-500  group-hover:text-white"
+              >{{ variant }}</span
+            >
+            <span
+              class="text-sm font-bold text-yellow-500 group-hover:text-white"
+              >{{ price }}€</span
+            >
+          </div>
         </div>
       </div>
-      <div
-        class="flex flex-col justify-between h-32 px-3 py-3 border border-gray-200 rounded-md "
-      >
-        <div>
-          <div class="font-bold text-gray-800">Ranch Burger</div>
-          <span class="text-sm font-light text-gray-400">150g</span>
-        </div>
-        <div class="flex flex-row items-center justify-between">
-          <span class="self-end text-lg font-bold text-yellow-500">$7.00</span>
-          <img
-            src="https://source.unsplash.com/sc5sTPMrVfk/600x500"
-            class="object-cover rounded-md h-14 w-14"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="flex flex-col justify-between h-32 px-3 py-3 border border-gray-200 rounded-md "
-      >
-        <div>
-          <div class="font-bold text-gray-800">Pizza Bacon</div>
-          <span class="text-sm font-light text-gray-400">150g</span>
-        </div>
-        <div class="flex flex-row items-center justify-between">
-          <span class="self-end text-lg font-bold text-yellow-500">$1.75</span>
-          <img
-            src="https://source.unsplash.com/sc5sTPMrVfk/500x500"
-            class="object-cover rounded-md h-14 w-14"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="flex flex-col justify-between h-32 px-3 py-3 border border-gray-200 rounded-md "
-      >
-        <div>
-          <div class="font-bold text-gray-800">Griled corn</div>
-          <span class="text-sm font-light text-gray-400">150g</span>
-        </div>
-        <div class="flex flex-row items-center justify-between">
-          <span class="self-end text-lg font-bold text-yellow-500">$1.75</span>
-          <img
-            src="https://source.unsplash.com/MNtag_eXMKw/600x600"
-            class="object-cover rounded-md h-14 w-14"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="flex flex-col justify-between h-32 px-3 py-3 border border-gray-200 rounded-md "
-      >
-        <div>
-          <div class="font-bold text-gray-800">Griled corn</div>
-          <span class="text-sm font-light text-gray-400">150g</span>
-        </div>
-        <div class="flex flex-row items-center justify-between">
-          <span class="self-end text-lg font-bold text-yellow-500">$1.75</span>
-          <img
-            src="https://source.unsplash.com/MNtag_eXMKw/600x600"
-            class="object-cover rounded-md h-14 w-14"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="flex flex-col justify-between h-32 px-3 py-3 border border-gray-200 rounded-md "
-      >
-        <div>
-          <div class="font-bold text-gray-800">Griled corn</div>
-          <span class="text-sm font-light text-gray-400">150g</span>
-        </div>
-        <div class="flex flex-row items-center justify-between">
-          <span class="self-end text-lg font-bold text-yellow-500">$1.75</span>
-          <img
-            src="https://source.unsplash.com/MNtag_eXMKw/600x600"
-            class="object-cover rounded-md h-14 w-14"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="flex flex-col justify-between h-32 px-3 py-3 border border-gray-200 rounded-md "
-      >
-        <div>
-          <div class="font-bold text-gray-800">Griled corn</div>
-          <span class="text-sm font-light text-gray-400">150g</span>
-        </div>
-        <div class="flex flex-row items-center justify-between">
-          <span class="self-end text-lg font-bold text-yellow-500">$1.75</span>
-          <img
-            src="https://source.unsplash.com/MNtag_eXMKw/600x600"
-            class="object-cover rounded-md h-14 w-14"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="flex flex-col justify-between h-32 px-3 py-3 border border-gray-200 rounded-md "
-      >
-        <div>
-          <div class="font-bold text-gray-800">Griled corn</div>
-          <span class="text-sm font-light text-gray-400">150g</span>
-        </div>
-        <div class="flex flex-row items-center justify-between">
-          <span class="self-end text-lg font-bold text-yellow-500">$1.75</span>
-          <img
-            src="https://source.unsplash.com/MNtag_eXMKw/600x600"
-            class="object-cover rounded-md h-14 w-14"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="flex flex-col justify-between h-32 px-3 py-3 border border-gray-200 rounded-md "
-      >
-        <div>
-          <div class="font-bold text-gray-800">Griled corn</div>
-          <span class="text-sm font-light text-gray-400">150g</span>
-        </div>
-        <div class="flex flex-row items-center justify-between">
-          <span class="self-end text-lg font-bold text-yellow-500">$1.75</span>
-          <img
-            src="https://source.unsplash.com/MNtag_eXMKw/600x600"
-            class="object-cover rounded-md h-14 w-14"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="flex flex-col justify-between h-32 px-3 py-3 border border-gray-200 rounded-md "
-      >
-        <div>
-          <div class="font-bold text-gray-800">Griled corn</div>
-          <span class="text-sm font-light text-gray-400">150g</span>
-        </div>
-        <div class="flex flex-row items-center justify-between">
-          <span class="self-end text-lg font-bold text-yellow-500">$1.75</span>
-          <img
-            src="https://source.unsplash.com/MNtag_eXMKw/600x600"
-            class="object-cover rounded-md h-14 w-14"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="flex flex-col justify-between h-32 px-3 py-3 border border-gray-200 rounded-md "
-      >
-        <div>
-          <div class="font-bold text-gray-800">Griled corn</div>
-          <span class="text-sm font-light text-gray-400">150g</span>
-        </div>
-        <div class="flex flex-row items-center justify-between">
-          <span class="self-end text-lg font-bold text-yellow-500">$1.75</span>
-          <img
-            src="https://source.unsplash.com/MNtag_eXMKw/600x600"
-            class="object-cover rounded-md h-14 w-14"
-            alt=""
-          />
-        </div>
-      </div>
+
       <!-- end products -->
     </div>
   </div>
@@ -231,11 +91,27 @@ export default {
       default: '',
     },
   },
+  data() {
+    return {
+      filterType: 'all',
+    }
+  },
   computed: {
-    // a computed getter
-    foodCategories() {
-      // Get unique foodCategories
+    foodTypes() {
+      // Get unique foodTypes
       return [...new Set(this.foods.map((food) => food.type))]
+    },
+    foodByType() {
+      console.log(this.filterType)
+      return this.foods.filter(
+        (food) => this.filterType === 'all' || food.type === this.filterType
+      )
+    },
+  },
+  methods: {
+    updateFilterType(type) {
+      this.filterType = type
+      console.log('updateFilterType')
     },
   },
 }

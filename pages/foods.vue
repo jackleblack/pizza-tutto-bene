@@ -50,13 +50,13 @@ export default {
       errorMsg: null,
     }
   },
-  async created() {
-    const { data: posts, error } = await this.$supabase
-      .from('food_category')
-      .select('*')
-    this.posts = posts
-    this.loaded = true
-    this.errorMsg = error
-  },
+  // async created() {
+  //   const { data: posts, error } = await this.$supabase
+  //     .from('food_category')
+  //     .select('*')
+  //   this.posts = posts
+  //   this.loaded = true
+  //   this.errorMsg = error
+  // },
 }
 </script>
