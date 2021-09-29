@@ -31,37 +31,39 @@
         Tous
       </span>
       <span
-        v-for="foodType in foodTypes"
-        :key="foodType"
+        v-for="itemType in itemTypes"
+        :key="itemType"
         class="px-5 py-1 mr-4 text-sm font-semibold cursor-pointer  rounded-2xl hover:bg-yellow-400 hover:text-white"
-        :class="{ 'bg-yellow-500 text-white': foodType === filterType }"
-        @click="updateFilterType(foodType)"
+        :class="{ 'bg-yellow-500 text-white': itemType === filterType }"
+        @click="updateFilterType(itemType)"
       >
-        {{ foodType }}
+        {{ itemType }}
       </span>
     </div>
     <!-- end Types -->
     <!-- products -->
     <div class="grid grid-cols-3 gap-4 px-5 mt-5 overflow-y-auto h-3/4">
       <div
-        v-for="(food, index) in foodByType"
-        :key="index"
+        v-for="item in itemByType"
+        :key="item.slug"
         class="flex flex-col justify-between h-40 px-3 py-3 bg-gray-100 rounded rounded-md shadow-lg "
       >
         <div>
-          <div class="font-bold text-gray-800">{{ food.name }}</div>
+          <div class="font-bold text-gray-800">{{ item.name }}</div>
           <span
             class="h-4 overflow-hidden text-xs font-light text-gray-400  overflow-ellipsis"
-            >{{ food.description }}</span
+            >{{ item.description }}</span
           >
         </div>
         <div class="flex flex-row items-center justify-between">
           <div
-            v-for="(price, variant) in food.prices"
+            v-for="(price, variant) in item.prices"
             :key="price"
             class="flex flex-col p-2 text-yellow-500 bg-white cursor-pointer  rounded-2xl group hover:bg-yellow-500"
+            @click="addToCart(item, price, variant)"
           >
             <span
+              v-if="variant"
               class="text-xs font-semibold text-yellow-500  group-hover:text-white"
               >{{ variant }}</span
             >
@@ -80,15 +82,11 @@
 
 <script>
 export default {
-  name: 'Left',
+  name: 'ItemList',
   props: {
-    foods: {
+    items: {
       type: Array,
-      default: () => [],
-    },
-    title: {
-      type: String,
-      default: '',
+      required: true,
     },
   },
   data() {
@@ -97,14 +95,14 @@ export default {
     }
   },
   computed: {
-    foodTypes() {
-      // Get unique foodTypes
-      return [...new Set(this.foods.map((food) => food.type))]
+    itemTypes() {
+      // Get unique itemTypes
+      return [...new Set(this.items.map((item) => item.type))]
     },
-    foodByType() {
+    itemByType() {
       console.log(this.filterType)
-      return this.foods.filter(
-        (food) => this.filterType === 'all' || food.type === this.filterType
+      return this.items.filter(
+        (item) => this.filterType === 'all' || item.type === this.filterType
       )
     },
   },
@@ -112,6 +110,9 @@ export default {
     updateFilterType(type) {
       this.filterType = type
       console.log('updateFilterType')
+    },
+    addToCart(item, price, variant) {
+      this.$store.dispatch('addToCard', { item, price, variant })
     },
   },
 }
