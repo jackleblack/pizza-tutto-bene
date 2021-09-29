@@ -311,7 +311,7 @@
   },
   {
     "name": "Fermière",
-    "type": "cream",
+    "type": "Crème",
     "description": "Oignons,lardons,emmental",
     "prices": {
       "solo": "8.50",
@@ -321,7 +321,7 @@
   },
   {
     "name": "Baltique",
-    "type": "cream",
+    "type": "Crème",
     "description": "Saumon,emmental",
     "prices": {
       "solo": "9.00",
@@ -331,7 +331,7 @@
   },
   {
     "name": "Pennoise",
-    "type": "cream",
+    "type": "Crème",
     "description": "Jambon,œuf,mozzarella,emmental",
     "prices": {
       "solo": "9.00",
@@ -341,7 +341,7 @@
   },
   {
     "name": "Paysanne",
-    "type": "cream",
+    "type": "Crème",
     "description": "Champignons,chèvre,oignons,emmental",
     "prices": {
       "solo": "10.00",
@@ -351,7 +351,7 @@
   },
   {
     "name": "Pizzaïolo",
-    "type": "cream",
+    "type": "Crème",
     "description": "Champignons,thon,œuf,mozzarella,emmental",
     "prices": {
       "solo": "9.50",
@@ -361,7 +361,7 @@
   },
   {
     "name": "Tartiflette",
-    "type": "cream",
+    "type": "Crème",
     "description": "Reblochon,lardons,oignons,pomme de terre,emmental",
     "prices": {
       "solo": "10.00",
@@ -371,7 +371,7 @@
   },
   {
     "name": "Foie gras",
-    "type": "cream",
+    "type": "Crème",
     "description": "Foie gras,emmental",
     "prices": {
       "solo": "10.50",
@@ -381,7 +381,7 @@
   },
   {
     "name": "Poulet Champignons",
-    "type": "cream",
+    "type": "Crème",
     "description": "Poulet,champignons,emmental",
     "prices": {
       "solo": "10.00",
@@ -391,7 +391,7 @@
   },
   {
     "name": "Kebab",
-    "type": "cream",
+    "type": "Crème",
     "description": "Kebab en lamelles,oignons,emmental",
     "prices": {
       "solo": "10.00",
@@ -401,7 +401,7 @@
   },
   {
     "name": "Crevettes",
-    "type": "cream",
+    "type": "Crème",
     "description": "Crevettes,sauce basilic,emmental",
     "prices": {
       "solo": "10.00",
@@ -411,7 +411,7 @@
   },
   {
     "name": "La Seguin",
-    "type": "cream",
+    "type": "Crème",
     "description": "Lardons,chèvre,miel,emmental",
     "prices": {
       "solo": "10.00",
@@ -421,7 +421,7 @@
   },
   {
     "name": "La Cannibale",
-    "type": "cream",
+    "type": "Crème",
     "description": "Steack haché,oignons,œuf,emmental",
     "prices": {
       "solo": "10.00",
@@ -443,16 +443,6 @@
     "name": "Royal",
     "type": "Calzone",
     "description": "Jambon,champignons,mozzarella,emmental",
-    "prices": {
-      "solo": "8.50",
-      "standard": "11.50",
-      "maxi": "13.50"
-    }
-  },
-  {
-    "name": "4 Fromages",
-    "type": "Calzone",
-    "description": "Au choix",
     "prices": {
       "solo": "8.50",
       "standard": "11.50",

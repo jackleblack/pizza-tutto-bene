@@ -1,65 +1,47 @@
 <template>
-  <div>
-    <!-- Types -->
-    <div class="flex items-center justify-between mb-8 text-gray-800">
-      <p class="text-2xl font-bold">Carte</p>
-      <!-- <p class="">December, 12</p> -->
-    </div>
-    <div class="flex flex-row px-5 mt-5">
-      <span
-        class="px-5 py-1 mr-4 text-sm font-semibold cursor-pointer  rounded-2xl hover:bg-yellow-400 hover:text-white"
-        :class="{ 'bg-yellow-500 text-white': 'all' === filterType }"
-        @click="updateFilterType('all')"
-      >
-        Tous
-      </span>
-      <span
-        v-for="itemType in itemTypes"
-        :key="itemType"
-        class="px-4 py-1 mr-4 text-sm font-semibold cursor-pointer  rounded-2xl hover:bg-yellow-400 hover:text-white"
-        :class="{ 'bg-yellow-500 text-white': itemType === filterType }"
-        @click="updateFilterType(itemType)"
-      >
-        {{ itemType }}
-      </span>
-    </div>
-    <!-- end Types -->
-    <!-- products -->
-    <div class="grid grid-cols-3 gap-4 px-5 mt-5 overflow-y-auto h-3/4">
-      <div
-        v-for="item in itemByType"
-        :key="item.slug"
-        class="flex flex-col justify-between h-40 px-3 py-3 bg-gray-100 rounded rounded-md shadow-lg "
-      >
-        <div>
-          <div class="font-bold text-gray-800">{{ item.name }}</div>
-          <span
-            class="h-4 overflow-hidden text-xs font-light text-gray-400  overflow-ellipsis"
-            >{{ item.description }}</span
-          >
+  <ul
+    role="list"
+    class="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 lg:grid-cols-3"
+  >
+    <li
+      v-for="item in items"
+      :key="item.slug"
+      class="col-span-1 bg-white divide-y divide-gray-200 rounded-lg shadow"
+    >
+      <div class="flex items-center justify-between w-full p-6 space-x-6">
+        <div class="flex-1 truncate">
+          <div class="flex items-center space-x-3">
+            <h3 class="text-sm font-medium text-gray-900 truncate">
+              {{ item.name }}
+            </h3>
+          </div>
+          <p class="mt-1 text-sm text-gray-500 truncate">
+            {{ item.title }}
+          </p>
+          <p class="mt-1 text-xs text-gray-500 truncate">
+            {{ item.description || '🔥' }}
+          </p>
         </div>
-        <div class="flex flex-row items-center justify-between">
+      </div>
+      <div>
+        <div class="flex -mt-px divide-x divide-gray-200">
           <div
             v-for="(price, variant) in item.prices"
-            :key="price"
-            class="flex flex-col p-2 text-yellow-500 bg-white cursor-pointer  rounded-2xl group hover:bg-yellow-500"
+            :key="variant"
+            class="flex flex-1 w-0 cursor-pointer hover:bg-gray-100"
             @click="addToCart(item, price, variant)"
           >
-            <span
-              v-if="variant"
-              class="text-xs font-semibold text-yellow-500  group-hover:text-white"
-              >{{ variant }}</span
+            <a
+              class="relative flex flex-col items-center justify-center flex-1 w-0 py-4 -mr-px text-sm font-medium text-gray-700 border border-transparent rounded-bl-lg "
             >
-            <span
-              class="text-sm font-bold text-yellow-500 group-hover:text-white"
-              >{{ price }}€</span
-            >
+              <span class="text-xs">{{ variant }}</span>
+              <span class="text-yellow-500">{{ price }}</span>
+            </a>
           </div>
         </div>
       </div>
-      <!-- end products -->
-    </div>
-  </div>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -71,28 +53,7 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      filterType: 'all',
-    }
-  },
-  computed: {
-    itemTypes() {
-      // Get unique itemTypes
-      return [...new Set(this.items.map((item) => item.type))]
-    },
-    itemByType() {
-      console.log(this.filterType)
-      return this.items.filter(
-        (item) => this.filterType === 'all' || item.type === this.filterType
-      )
-    },
-  },
   methods: {
-    updateFilterType(type) {
-      this.filterType = type
-      console.log('updateFilterType')
-    },
     addToCart(item, price, variant) {
       this.$store.dispatch('addToCard', { item, price, variant })
     },

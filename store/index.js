@@ -53,6 +53,9 @@ export const actions = {
       await commit('decrementItemQuantity', cartItem)
     }
   },
+  async resetCart({ state, commit }) {
+    await commit('setCart', [])
+  },
 }
 
 export const getters = {
