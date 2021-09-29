@@ -19,15 +19,20 @@ export const mutations = {
     const cartItem = state.cart.find((item) => item.key === key)
     cartItem.quantity++
   },
-  setTotalPrice(state, data) {
-    state.totalPrice = data
+  decrementItemQuantity(state, { key }) {
+    const cartItem = state.cart.find((item) => item.key === key)
+    if (cartItem.quantity > 1) {
+      cartItem.quantity--
+    } else {
+      const index = state.cart.findIndex((item) => item.key === key)
+      state.cart.splice(index, 1)
+    }
   },
 }
 
 export const actions = {
   async nuxtServerInit({ commit }) {
     const items = await shop.getItems()
-    console.log(items)
     await commit('setItems', items)
   },
   async addToCard({ state, commit }, { item, price, variant }) {
@@ -39,19 +44,14 @@ export const actions = {
       await commit('incrementItemQuantity', cartItem)
     }
   },
-  async removeFromCard({ commit }, data) {
-    const res = await this.$axios.delete('/cart/remove', {
-      data: {
-        id: data,
-      },
-    })
-    await commit('setTotalPrice', res.data.totalPrice)
-    await commit('setCart', res.data.cart)
-  },
-  async changeItemCount({ commit }, data) {
-    const res = await this.$axios.post('/cart/change', data)
-    commit('setCart', res.data.cart)
-    commit('setTotalPrice', res.data.totalPrice)
+  async changeItemQuantity({ state, commit }, { itemFromCart, quantity }) {
+    const cartItem = state.cart.find((item) => item.key === itemFromCart.key)
+
+    if (quantity > 0) {
+      await commit('incrementItemQuantity', cartItem)
+    } else {
+      await commit('decrementItemQuantity', cartItem)
+    }
   },
 }
 
@@ -60,7 +60,6 @@ export const getters = {
     return state.items.map((item) => ({ ...item, slug: slugify(item.name) }))
   },
   getCart(state) {
-    console.log(state.cart)
     return state.cart
   },
   getTotalQuantity: (state, getters) => {

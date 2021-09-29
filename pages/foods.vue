@@ -2,23 +2,14 @@
 <template>
   <div class="flex flex-wrap h-full">
     <div class="w-full px-6 py-6 bg-white lg:w-8/12 rounded-3xl">
-      <div class="flex items-center justify-between mb-8 text-gray-800">
-        <p class="text-2xl font-bold">Carte</p>
-        <p class="">December, 12</p>
-      </div>
       <ItemList :items="items" />
     </div>
     <div class="w-full h-full mt-8 lg:mt-0 lg:w-4/12 lg:pl-4">
-      <div class="h-full px-6 pt-6 bg-white rounded-3xl">
-        <div class="flex pb-6 text-2xl font-bold text-gray-800">
-          <p>Panier</p>
-        </div>
-        <ShoppingCart
-          :cart="cart"
-          :total-quantity="totalQuantity"
-          :total-price="totalPrice"
-        />
-      </div>
+      <ShoppingCart
+        :cart="cart"
+        :total-quantity="totalQuantity"
+        :total-price="totalPrice"
+      />
     </div>
   </div>
 

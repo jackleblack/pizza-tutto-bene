@@ -1,27 +1,10 @@
 <template>
   <div>
-    <!-- header -->
-    <!-- <div class="flex flex-row items-center justify-between px-5 mt-5">
-      <div class="text-gray-800">
-        <div class="text-xl font-bold">Simons's BQQ Team</div>
-        <span class="text-xs">Location ID#SIMON123</span>
-      </div>
-      <div class="flex items-center">
-        <div class="mr-4 text-sm text-center">
-          <div class="font-light text-gray-500">last synced</div>
-          <span class="font-semibold">3 mins ago</span>
-        </div>
-        <div>
-          <span
-            class="px-4 py-2 font-semibold text-gray-800 bg-gray-200 rounded"
-          >
-            Help
-          </span>
-        </div>
-      </div>
-    </div> -->
-    <!-- end header -->
     <!-- Types -->
+    <div class="flex items-center justify-between mb-8 text-gray-800">
+      <p class="text-2xl font-bold">Carte</p>
+      <!-- <p class="">December, 12</p> -->
+    </div>
     <div class="flex flex-row px-5 mt-5">
       <span
         class="px-5 py-1 mr-4 text-sm font-semibold cursor-pointer  rounded-2xl hover:bg-yellow-400 hover:text-white"
@@ -33,7 +16,7 @@
       <span
         v-for="itemType in itemTypes"
         :key="itemType"
-        class="px-5 py-1 mr-4 text-sm font-semibold cursor-pointer  rounded-2xl hover:bg-yellow-400 hover:text-white"
+        class="px-4 py-1 mr-4 text-sm font-semibold cursor-pointer  rounded-2xl hover:bg-yellow-400 hover:text-white"
         :class="{ 'bg-yellow-500 text-white': itemType === filterType }"
         @click="updateFilterType(itemType)"
       >
@@ -74,7 +57,6 @@
           </div>
         </div>
       </div>
-
       <!-- end products -->
     </div>
   </div>
