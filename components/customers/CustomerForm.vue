@@ -1,5 +1,5 @@
 <template>
-  <form class="form-widget" @submit.prevent="updateProfile">
+  <form class="form-widget" @submit.prevent="updateCustomer">
     <div>
       <label for="name">Name</label>
       <input id="name" v-model="name" type="text" />
@@ -33,32 +33,31 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const loading = ref(true)
-    const id = ref('')
-    const username = ref('')
-    const name = ref('')
-    const email = ref('')
-    const phone = ref('')
-
-    async function updateProfile() {
+  data: () => ({
+    loading: true,
+    id: '',
+    username: '',
+    name: '',
+    email: '',
+    phone: '',
+  }),
+  methods: {
+    async updateCustomer() {
       try {
-        loading.value = true
+        this.loading = true
 
         const updates = {
-          id: id.value,
-          username: username.value,
-          name: name.value,
-          email: email.value,
-          phone: phone.value,
+          id: this.id,
+          username: this.username,
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
           updated_at: new Date(),
         }
 
         const { error } = await this.$supabase
-          .from('profiles')
+          .from('customers')
           .upsert(updates, {
             returning: 'minimal', // Don't return the value after inserting
           })
@@ -67,19 +66,9 @@ export default {
       } catch (error) {
         alert(error.message)
       } finally {
-        loading.value = false
+        this.loading = false
       }
-    }
-
-    return {
-      loading,
-      username,
-      name,
-      email,
-      phone,
-
-      updateProfile,
-    }
+    },
   },
 }
 </script>

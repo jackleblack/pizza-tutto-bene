@@ -11,13 +11,13 @@
       </div>
       <div class="flex justify-between w-32">
         <span
-          class="px-3 py-1 bg-gray-300 rounded-md cursor-pointer  hover:bg-yellow-500 hover:text-white"
+          class="px-3 py-1 bg-gray-300 rounded-md cursor-pointer  hover:bg-yellow-500 hover:text-white print:hidden"
           @click="updateQuantity(item, -1)"
           >-</span
         >
         <span class="mx-4 font-semibold">{{ item.quantity }}</span>
         <span
-          class="px-3 py-1 bg-gray-300 rounded-md cursor-pointer  hover:bg-yellow-500 hover:text-white"
+          class="px-3 py-1 bg-gray-300 rounded-md cursor-pointer  hover:bg-yellow-500 hover:text-white print:hidden"
           @click="updateQuantity(item, 1)"
           >+</span
         >

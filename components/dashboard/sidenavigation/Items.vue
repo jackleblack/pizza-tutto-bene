@@ -1,14 +1,14 @@
 <template>
-  <ul class="md:pl-3">
-    <sidenav-item title="Home" to="/">
-      <home-icon />
+  <ul class="md:pl-2">
+    <sidenav-item title="Carte" to="/">
+      <pizza-icon />
     </sidenav-item>
 
-    <sidenav-item title="Status" to="/admin/status">
-      <status-icon />
+    <sidenav-item title="Clients" to="/customers">
+      <user-icon />
     </sidenav-item>
 
-    <sidenav-item title="Archives" to="/admin/archives">
+    <!-- <sidenav-item title="Archives" to="/admin/archives">
       <archives-icon />
     </sidenav-item>
 
@@ -22,31 +22,31 @@
 
     <sidenav-item title="Documentation" to="/admin/documentation">
       <documentation-icon />
-    </sidenav-item>
+    </sidenav-item> -->
   </ul>
 </template>
 
 <script>
-import SidenavItem from './Item.vue';
+import SidenavItem from './Item.vue'
 
 /* ICONS */
-import HomeIcon from './icons/Home.vue';
-import StatusIcon from './icons/Status.vue';
-import CreditsIcon from './icons/Credits.vue';
-import SettingsIcon from './icons/Settings.vue';
-import ArchivesIcon from './icons/Archives.vue';
-import DocumentationIcon from './icons/Documentation.vue';
+import PizzaIcon from './icons/Pizza.vue'
+import UserIcon from './icons/User.vue'
+// import CreditsIcon from './icons/Credits.vue'
+// import SettingsIcon from './icons/Settings.vue'
+// import ArchivesIcon from './icons/Archives.vue'
+// import DocumentationIcon from './icons/Documentation.vue'
 
 export default {
   name: 'SidenavItems',
   components: {
-    HomeIcon,
-    StatusIcon,
+    PizzaIcon,
+    UserIcon,
     SidenavItem,
-    CreditsIcon,
-    SettingsIcon,
-    ArchivesIcon,
-    DocumentationIcon,
+    // CreditsIcon,
+    // SettingsIcon,
+    // ArchivesIcon,
+    // DocumentationIcon,
   },
-};
+}
 </script>

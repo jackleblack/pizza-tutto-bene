@@ -34,7 +34,8 @@
   "dependencies": {
     "@supabase/supabase-js": "^1.23.0",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "vue-print-nb": "^1.7.5"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",

@@ -3,7 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {},
   variants: {
-    extend: {},
+    extend: {
+      display: ['hover', 'focus', ' print'],
+    },
   },
   plugins: [],
 }

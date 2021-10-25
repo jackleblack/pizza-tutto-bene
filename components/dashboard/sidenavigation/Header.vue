@@ -1,19 +1,13 @@
 <template>
   <div
-    class="
-      bg-gray-900
-      flex
-      items-center
-      justify-center
-      mb-6
-      pb-6
-      pt-3
-      sticky
-      top-0
-      z-10
-    "
+    class="sticky top-0 z-10 flex items-center justify-center pt-3 pb-3 mb-6 bg-white  rounded-xl"
   >
-    <img src="/images/2.png" width="80" height="80" alt="Enoch Ndika" />
+    <img
+      src="/images/pizza.png"
+      width="80"
+      height="80"
+      alt="Logo la cloche d'or"
+    />
   </div>
 </template>
 
