@@ -1,14 +1,13 @@
 <template>
   <aside
     class="
-      scrollbar
+      top-0
       h-screen
       overflow-y-auto
       text-white
-      top-0
-      lg:absolute
-      bg-gray-900
-      lg:block lg:z-40
+      bg-black
+      scrollbar
+      lg:absolute lg:block lg:z-40
     "
     :class="[
       style[mobilePosition],

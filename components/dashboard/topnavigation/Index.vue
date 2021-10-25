@@ -1,29 +1,12 @@
 <template>
-  <header class="h-20 items-center relative z-10">
+  <header class="relative z-10 items-center h-20">
     <div
-      class="
-        flex flex-center flex-col
-        h-full
-        justify-center
-        mx-auto
-        relative
-        px-3
-        text-white
-        z-10
-      "
+      class="relative z-10 flex flex-col justify-center h-full px-3 mx-auto text-white  flex-center"
     >
       <div
-        class="
-          flex
-          items-center
-          pl-1
-          relative
-          w-full
-          sm:ml-0 sm:pr-2
-          lg:max-w-68
-        "
+        class="relative flex items-center w-full pl-1  sm:ml-0 sm:pr-2 lg:max-w-68"
       >
-        <div class="flex group h-full items-center relative w-12">
+        <div class="relative flex items-center w-12 h-full group">
           <button
             type="button"
             aria-expanded="false"
@@ -34,39 +17,16 @@
             &#8801;
           </button>
         </div>
-        <div class="container flex left-0 relative w-3/4">
+        <div class="container relative left-0 flex w-3/4">
           <div
-            class="
-              group
-              hidden
-              items-center
-              ml-8
-              relative
-              w-full
-              md:flex
-              lg:w-72
-            "
+            class="relative items-center hidden w-full ml-8  group md:flex lg:w-72"
           >
             <div
-              class="
-                absolute
-                block
-                cursor-pointer
-                flex
-                items-center
-                justify-center
-                h-10
-                p-3
-                pr-2
-                text-gray-500 text-sm
-                uppercase
-                w-auto
-                sm:hidden
-              "
+              class="absolute flex items-center justify-center block w-auto h-10 p-3 pr-2 text-sm text-gray-500 uppercase cursor-pointer  sm:hidden"
             >
               <svg
                 fill="none"
-                class="h-5 relative w-5"
+                class="relative w-5 h-5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
@@ -79,19 +39,7 @@
               </svg>
             </div>
             <svg
-              class="
-                absolute
-                fill-current
-                h-4
-                hidden
-                left-0
-                ml-4
-                pointer-events-none
-                text-gray-500
-                w-4
-                group-hover:text-gray-400
-                sm:block
-              "
+              class="absolute left-0 hidden w-4 h-4 ml-4 text-gray-500 pointer-events-none fill-current  group-hover:text-gray-400 sm:block"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -122,21 +70,12 @@
           </div>
         </div>
         <div
-          class="
-            flex
-            items-center
-            justify-end
-            ml-5
-            p-1
-            relative
-            w-full
-            sm:mr-0 sm:right-auto
-          "
+          class="relative flex items-center justify-end w-full p-1 ml-5  sm:mr-0 sm:right-auto"
         >
           <a href="#" class="block pr-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
+              class="w-6 h-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -152,7 +91,7 @@
           <a href="#" class="block pr-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
+              class="w-6 h-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -165,10 +104,10 @@
               />
             </svg>
           </a>
-          <a href="#" class="block pr-5 relative">
+          <a href="#" class="relative block pr-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
+              class="w-6 h-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -181,11 +120,11 @@
               />
             </svg>
           </a>
-          <a href="#" class="block relative">
+          <a href="#" class="relative block">
             <img
               alt="Maurice Lokumba"
               src="/images/1.jpg"
-              class="h-10 mx-auto object-cover rounded-full w-10"
+              class="object-cover w-10 h-10 mx-auto rounded-full"
             />
           </a>
         </div>

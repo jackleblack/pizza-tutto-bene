@@ -32,10 +32,24 @@
             @click="addToCart(item, price, variant)"
           >
             <a
-              class="relative flex flex-col items-center justify-center flex-1 w-0 py-4 -mr-px text-sm font-medium text-gray-700 border border-transparent rounded-bl-lg "
+              class="
+                relative
+                flex flex-col
+                items-center
+                justify-center
+                flex-1
+                w-0
+                py-4
+                -mr-px
+                text-sm
+                font-medium
+                text-gray-700
+                border border-transparent
+                rounded-bl-lg
+              "
             >
               <span class="text-xs">{{ variant }}</span>
-              <span class="text-yellow-500">{{ price }}</span>
+              <span class="text-golden">{{ price }}</span>
             </a>
           </div>
         </div>

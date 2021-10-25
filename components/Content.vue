@@ -78,7 +78,15 @@
               <div>
                 <p class="m-0 text-sm font-bold">Progress</p>
                 <div
-                  class="w-full h-1 mx-0 my-2 overflow-hidden bg-white rounded-md "
+                  class="
+                    w-full
+                    h-1
+                    mx-0
+                    my-2
+                    overflow-hidden
+                    bg-white
+                    rounded-md
+                  "
                 >
                   <span class="block w-6/12 h-1 bg-yellow-700 rounded-md" />
                 </div>
@@ -97,7 +105,18 @@
                     alt="participant"
                   />
                   <button
-                    class="flex items-center justify-center w-5 h-5 p-0 ml-3 bg-white border-none rounded-full "
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      w-5
+                      h-5
+                      p-0
+                      ml-3
+                      bg-white
+                      border-none
+                      rounded-full
+                    "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +135,15 @@
                   </button>
                 </div>
                 <div
-                  class="flex flex-shrink-0 px-4 py-2 text-sm font-bold text-yellow-600 rounded-lg "
+                  class="
+                    flex flex-shrink-0
+                    px-4
+                    py-2
+                    text-sm
+                    font-bold
+                    to-golden-600
+                    rounded-lg
+                  "
                 >
                   2 Days Left
                 </div>
@@ -137,7 +164,15 @@
               <div>
                 <p class="m-0 text-sm font-bold">Progress</p>
                 <div
-                  class="w-full h-1 mx-0 my-2 overflow-hidden bg-white rounded-md "
+                  class="
+                    w-full
+                    h-1
+                    mx-0
+                    my-2
+                    overflow-hidden
+                    bg-white
+                    rounded-md
+                  "
                 >
                   <span class="block w-5/12 h-1 bg-indigo-700 rounded-md" />
                 </div>
@@ -156,7 +191,18 @@
                     alt="participant"
                   />
                   <button
-                    class="flex items-center justify-center w-5 h-5 p-0 ml-3 bg-white border-none rounded-full "
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      w-5
+                      h-5
+                      p-0
+                      ml-3
+                      bg-white
+                      border-none
+                      rounded-full
+                    "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +221,15 @@
                   </button>
                 </div>
                 <div
-                  class="flex flex-shrink-0 px-4 py-2 text-sm font-bold text-indigo-700 rounded-lg "
+                  class="
+                    flex flex-shrink-0
+                    px-4
+                    py-2
+                    text-sm
+                    font-bold
+                    text-indigo-700
+                    rounded-lg
+                  "
                 >
                   2 Days Left
                 </div>
@@ -196,7 +250,15 @@
               <div>
                 <p class="m-0 text-sm font-bold">Progress</p>
                 <div
-                  class="w-full h-1 mx-0 my-2 overflow-hidden bg-white rounded-md "
+                  class="
+                    w-full
+                    h-1
+                    mx-0
+                    my-2
+                    overflow-hidden
+                    bg-white
+                    rounded-md
+                  "
                 >
                   <span class="block w-7/12 h-1 bg-green-700 rounded-md" />
                 </div>
@@ -215,7 +277,18 @@
                     alt="participant"
                   />
                   <button
-                    class="flex items-center justify-center w-5 h-5 p-0 ml-3 bg-white border-none rounded-full "
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      w-5
+                      h-5
+                      p-0
+                      ml-3
+                      bg-white
+                      border-none
+                      rounded-full
+                    "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +307,15 @@
                   </button>
                 </div>
                 <div
-                  class="flex flex-shrink-0 px-4 py-2 text-sm font-bold text-green-700 rounded-lg "
+                  class="
+                    flex flex-shrink-0
+                    px-4
+                    py-2
+                    text-sm
+                    font-bold
+                    text-green-700
+                    rounded-lg
+                  "
                 >
                   2 Days Left
                 </div>
@@ -255,7 +336,15 @@
               <div>
                 <p class="m-0 text-sm font-bold">Progress</p>
                 <div
-                  class="w-full h-1 mx-0 my-2 overflow-hidden bg-white rounded-md "
+                  class="
+                    w-full
+                    h-1
+                    mx-0
+                    my-2
+                    overflow-hidden
+                    bg-white
+                    rounded-md
+                  "
                 >
                   <span class="block w-7/12 h-1 bg-blue-700 rounded-md" />
                 </div>
@@ -274,7 +363,18 @@
                     alt="participant"
                   />
                   <button
-                    class="flex items-center justify-center w-5 h-5 p-0 ml-3 bg-white border-none rounded-full "
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      w-5
+                      h-5
+                      p-0
+                      ml-3
+                      bg-white
+                      border-none
+                      rounded-full
+                    "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -293,7 +393,15 @@
                   </button>
                 </div>
                 <div
-                  class="flex flex-shrink-0 px-4 py-2 text-sm font-bold text-blue-700 rounded-lg "
+                  class="
+                    flex flex-shrink-0
+                    px-4
+                    py-2
+                    text-sm
+                    font-bold
+                    text-blue-700
+                    rounded-lg
+                  "
                 >
                   2 Days Left
                 </div>
@@ -314,7 +422,15 @@
               <div>
                 <p class="m-0 text-sm font-bold">Progress</p>
                 <div
-                  class="w-full h-1 mx-0 my-2 overflow-hidden bg-white rounded-md "
+                  class="
+                    w-full
+                    h-1
+                    mx-0
+                    my-2
+                    overflow-hidden
+                    bg-white
+                    rounded-md
+                  "
                 >
                   <span class="block w-7/12 h-1 bg-red-700 rounded-md" />
                 </div>
@@ -333,7 +449,18 @@
                     alt="participant"
                   />
                   <button
-                    class="flex items-center justify-center w-5 h-5 p-0 ml-3 bg-white border-none rounded-full "
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      w-5
+                      h-5
+                      p-0
+                      ml-3
+                      bg-white
+                      border-none
+                      rounded-full
+                    "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -352,7 +479,15 @@
                   </button>
                 </div>
                 <div
-                  class="flex flex-shrink-0 px-4 py-2 text-sm font-bold text-red-700 rounded-lg "
+                  class="
+                    flex flex-shrink-0
+                    px-4
+                    py-2
+                    text-sm
+                    font-bold
+                    text-red-700
+                    rounded-lg
+                  "
                 >
                   2 Days Left
                 </div>
@@ -373,7 +508,15 @@
               <div>
                 <p class="m-0 text-sm font-bold">Progress</p>
                 <div
-                  class="w-full h-1 mx-0 my-2 overflow-hidden bg-white rounded-md "
+                  class="
+                    w-full
+                    h-1
+                    mx-0
+                    my-2
+                    overflow-hidden
+                    bg-white
+                    rounded-md
+                  "
                 >
                   <span class="block w-7/12 h-1 bg-purple-700 rounded-md" />
                 </div>
@@ -392,7 +535,18 @@
                     alt="participant"
                   />
                   <button
-                    class="flex items-center justify-center w-5 h-5 p-0 ml-3 bg-white border-none rounded-full "
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      w-5
+                      h-5
+                      p-0
+                      ml-3
+                      bg-white
+                      border-none
+                      rounded-full
+                    "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -411,7 +565,15 @@
                   </button>
                 </div>
                 <div
-                  class="flex flex-shrink-0 px-4 py-2 text-sm font-bold text-purple-700 rounded-lg "
+                  class="
+                    flex flex-shrink-0
+                    px-4
+                    py-2
+                    text-sm
+                    font-bold
+                    text-purple-700
+                    rounded-lg
+                  "
                 >
                   2 Days Left
                 </div>
@@ -428,7 +590,15 @@
         </div>
         <div>
           <div
-            class="flex w-full p-4 border-t border-gray-700  solid 2xl:items-start hover:bg-gray-700"
+            class="
+              flex
+              w-full
+              p-4
+              border-t border-gray-700
+              solid
+              2xl:items-start
+              hover:bg-gray-700
+            "
           >
             <img
               src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
@@ -439,7 +609,14 @@
               <div class="flex items-center justify-between w-full">
                 <div class="font-medium text-white">Stephanie</div>
                 <div
-                  class="flex items-center justify-center cursor-pointer  h-7 w-7"
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    cursor-pointer
+                    h-7
+                    w-7
+                  "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -467,7 +644,15 @@
             </div>
           </div>
           <div
-            class="flex w-full p-4 border-t border-gray-700  solid 2xl:items-start hover:bg-gray-700"
+            class="
+              flex
+              w-full
+              p-4
+              border-t border-gray-700
+              solid
+              2xl:items-start
+              hover:bg-gray-700
+            "
           >
             <img
               src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
@@ -478,7 +663,14 @@
               <div class="flex items-center justify-between w-full">
                 <div class="font-medium text-white">Mark</div>
                 <div
-                  class="flex items-center justify-center cursor-pointer  h-7 w-7"
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    cursor-pointer
+                    h-7
+                    w-7
+                  "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -506,7 +698,15 @@
             </div>
           </div>
           <div
-            class="flex w-full p-4 border-t border-gray-700  solid 2xl:items-start hover:bg-gray-700"
+            class="
+              flex
+              w-full
+              p-4
+              border-t border-gray-700
+              solid
+              2xl:items-start
+              hover:bg-gray-700
+            "
           >
             <img
               src="https://images.unsplash.com/photo-1543965170-4c01a586684e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDZ8fG1hbnxlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
@@ -517,7 +717,14 @@
               <div class="flex items-center justify-between w-full">
                 <div class="font-medium text-white">David</div>
                 <div
-                  class="flex items-center justify-center cursor-pointer  h-7 w-7"
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    cursor-pointer
+                    h-7
+                    w-7
+                  "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -545,7 +752,15 @@
             </div>
           </div>
           <div
-            class="flex w-full p-4 border-t border-gray-700  solid 2xl:items-start hover:bg-gray-700"
+            class="
+              flex
+              w-full
+              p-4
+              border-t border-gray-700
+              solid
+              2xl:items-start
+              hover:bg-gray-700
+            "
           >
             <img
               src="https://images.unsplash.com/photo-1533993192821-2cce3a8267d1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHdvbWFuJTIwbW9kZXJufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
@@ -556,7 +771,14 @@
               <div class="flex items-center justify-between w-full">
                 <div class="font-medium text-white">Mark</div>
                 <div
-                  class="flex items-center justify-center cursor-pointer  h-7 w-7"
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    cursor-pointer
+                    h-7
+                    w-7
+                  "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

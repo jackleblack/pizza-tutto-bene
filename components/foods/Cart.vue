@@ -6,7 +6,7 @@
       <div v-if="cart.length" class="space-x-3">
         <span
           v-print="'#printMe'"
-          class="inline-flex px-2 py-1 text-white bg-yellow-500 rounded-md cursor-pointer  hover:bg-red-500 hover:text-red-100"
+          class="inline-flex px-2 py-1 text-white rounded-md cursor-pointer  bg-gradient-to-r from golden to-golden-light hover:bg-red-500 hover:text-red-100"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-6 h-6"
@@ -51,7 +51,7 @@
         <!-- button pay-->
         <div class="px-5 mt-5">
           <div
-            class="px-4 py-4 font-semibold text-center text-white bg-yellow-500 rounded-md shadow-lg "
+            class="px-4 py-4 font-semibold text-center text-white rounded-md shadow-lg  bg-gradient-to-r from-golden to-golden-light"
           >
             Valider le panier
           </div>
