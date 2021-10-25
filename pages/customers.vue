@@ -5,18 +5,18 @@
       <CustomerList :customers="customers" />
     </div>
     <div class="w-full h-full mt-8 lg:mt-0 lg:w-4/12 lg:pl-4">
-      <CustomerForm />
+      <CustomerCrud />
     </div>
   </div>
 </template>
 <script>
 import CustomerList from '../components/customers/CustomerList.vue'
-import CustomerForm from '../components/customers/CustomerForm.vue'
+import CustomerCrud from '../components/customers/CustomerCrud.vue'
 
 export default {
   components: {
     CustomerList,
-    CustomerForm,
+    CustomerCrud,
   },
 
   data: () => ({
