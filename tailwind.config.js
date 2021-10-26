@@ -1,5 +1,9 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,vue}', './components/**/*.{js,vue}'],
+  purge: [
+    './pages/**/*.{js,vue}',
+    './components/**/*.{js,vue}',
+    'node_modules/tv-*/dist/tv-*.umd.min.js',
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {

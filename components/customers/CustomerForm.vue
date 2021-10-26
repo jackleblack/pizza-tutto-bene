@@ -18,17 +18,17 @@
     </div>
 
     <div>
-      <label for="email" class="block text-sm font-medium text-gray-700">
+      <label for="phone" class="block text-sm font-medium text-gray-700">
         Téléphone
       </label>
       <div class="mt-1">
         <input
-          id="email"
-          v-model="email"
-          type="email"
-          name="email"
+          id="phone"
+          v-model="phone"
+          type="tel"
+          name="phone"
           class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          placeholder="zz@example.com"
+          placeholder="0765547382"
         />
       </div>
     </div>
@@ -45,6 +45,22 @@
           name="address"
           class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           placeholder="La canebière MaRSEILLE"
+        />
+      </div>
+    </div>
+
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-700">
+        Email
+      </label>
+      <div class="mt-1">
+        <input
+          id="email"
+          v-model="email"
+          type="email"
+          name="email"
+          class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          placeholder="zz@example.com"
         />
       </div>
     </div>
@@ -78,19 +94,19 @@ export default {
 
   data: () => ({
     loading: false,
-    name: this?.customer.name || '',
-    email: this?.customer.email || '',
-    phone: this?.customer.phone || '',
+    id: null,
+    name: '',
+    phone: '',
+    address: '',
+    email: '',
   }),
   watch: {
-    customer: {
-      handler(n, o) {
-        console.log('customerchanged')
-        this.name = n.name
-        this.email = n.email
-        this.phone = n.phone
-      },
-      deep: true,
+    customer() {
+      this.id = this.$props.customer.id
+      this.name = this.$props.customer.name
+      this.phone = this.$props.customer.phone
+      this.address = this.$props.customer.address
+      this.email = this.$props.customer.email
     },
   },
   mounted() {
@@ -103,13 +119,14 @@ export default {
 
         const updates = {
           name: this.name,
-          email: this.email,
           phone: this.phone,
+          address: this.address,
+          email: this.email,
         }
 
         // Update mode
-        if (this.customer.id) {
-          updates.id = this.customer.id
+        if (this.id) {
+          updates.id = this.id
         }
 
         const { error } = await this.$supabase
@@ -120,9 +137,18 @@ export default {
 
         if (error) throw error
       } catch (error) {
-        alert(error.message)
+        this.$toast.show({
+          type: 'danger',
+          title: 'Erreur',
+          message: error.message,
+        })
       } finally {
         this.loading = false
+        this.$toast.show({
+          type: 'success',
+          title: 'Bravo !',
+          message: this.id ? 'Mise à jour réussie' : 'Ajout réussie',
+        })
       }
     },
   },
