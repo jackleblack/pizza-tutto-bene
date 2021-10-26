@@ -64,7 +64,10 @@
                   <td
                     class="px-6 py-4 text-sm font-medium text-right  whitespace-nowrap"
                   >
-                    <a href="#" class="text-indigo-600 hover:text-indigo-900"
+                    <a
+                      href="#"
+                      class="text-indigo-600 hover:text-indigo-900"
+                      @click="updateCustomer(customer)"
                       >Editer</a
                     >
                   </td>
@@ -87,9 +90,15 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      currentCustomer: {},
+    }
+  },
   methods: {
-    addToCart(item, price, variant) {
-      this.$store.dispatch('addToCard', { item, price, variant })
+    updateCustomer(customer) {
+      console.log(customer, 'updateCustomer')
+      this.$emit('updateCustomer', customer)
     },
   },
 }

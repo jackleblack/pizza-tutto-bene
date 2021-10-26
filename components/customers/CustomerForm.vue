@@ -1,25 +1,59 @@
 <template>
-  <form class="form-widget" @submit.prevent="updateCustomer">
+  <form class="space-y-6" @submit.prevent="updateCustomer">
     <div>
-      <label for="name">Name</label>
-      <input id="name" v-model="name" type="text" />
+      <label for="email" class="block text-sm font-medium text-gray-700">
+        Nom
+      </label>
+
+      <div class="mt-1">
+        <input
+          id="name"
+          v-model="name"
+          type="text"
+          name="name"
+          class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          placeholder="Zinedine Zidane"
+        />
+      </div>
     </div>
 
     <div>
-      <label for="phone">phone</label>
-      <input id="phone" v-model="phone" type="phone" />
+      <label for="email" class="block text-sm font-medium text-gray-700">
+        Téléphone
+      </label>
+      <div class="mt-1">
+        <input
+          id="email"
+          v-model="email"
+          type="email"
+          name="email"
+          class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          placeholder="zz@example.com"
+        />
+      </div>
     </div>
 
     <div>
-      <label for="email">email</label>
-      <input id="email" v-model="email" type="email" />
+      <label for="address" class="block text-sm font-medium text-gray-700">
+        Adresse
+      </label>
+      <div class="mt-1">
+        <input
+          id="address"
+          v-model="address"
+          type="text"
+          name="address"
+          class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          placeholder="La canebière MaRSEILLE"
+        />
+      </div>
     </div>
 
     <div>
       <input
         type="submit"
-        class="block button primary"
-        :value="loading ? 'Loading ...' : 'Update'"
+        class="w-full px-4 py-4 font-semibold text-center text-white rounded-md shadow-lg  bg-gradient-to-r from-golden to-golden-light"
+        :value="loading ? 'Loading ...' : id ? 'Mettre à jour' : 'Ajouter'"
         :disabled="loading"
       />
     </div>
@@ -34,26 +68,48 @@
 
 <script>
 export default {
+  name: 'CustomerForm',
+  props: {
+    customer: {
+      type: Object,
+      required: true,
+    },
+  },
+
   data: () => ({
-    loading: true,
-    id: '',
-    username: '',
-    name: '',
-    email: '',
-    phone: '',
+    loading: false,
+    name: this?.customer.name || '',
+    email: this?.customer.email || '',
+    phone: this?.customer.phone || '',
   }),
+  watch: {
+    customer: {
+      handler(n, o) {
+        console.log('customerchanged')
+        this.name = n.name
+        this.email = n.email
+        this.phone = n.phone
+      },
+      deep: true,
+    },
+  },
+  mounted() {
+    console.log(this.customer.name, 'customer2')
+  },
   methods: {
     async updateCustomer() {
       try {
         this.loading = true
 
         const updates = {
-          id: this.id,
-          username: this.username,
           name: this.name,
           email: this.email,
           phone: this.phone,
-          updated_at: new Date(),
+        }
+
+        // Update mode
+        if (this.customer.id) {
+          updates.id = this.customer.id
         }
 
         const { error } = await this.$supabase

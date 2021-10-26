@@ -42,7 +42,6 @@ export default {
   },
   methods: {
     updateFilterType(type) {
-      console.log('iic')
       this.filterType = type
     },
   },

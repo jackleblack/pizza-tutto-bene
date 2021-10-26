@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="flex flex-col justify-between h-full">
-      <CustomerForm />
+      <CustomerForm :customer="customer" />
     </div>
   </div>
 </template>
@@ -20,44 +20,20 @@
 import CustomerForm from './CustomerForm.vue'
 
 export default {
+  name: 'CustomerCrud',
   components: {
     CustomerForm,
   },
-  data: () => ({
-    loading: true,
-    id: '',
-    username: '',
-    name: '',
-    email: '',
-    phone: '',
-  }),
-  methods: {
-    async updateCustomer() {
-      try {
-        this.loading = true
-
-        const updates = {
-          id: this.id,
-          username: this.username,
-          name: this.name,
-          email: this.email,
-          phone: this.phone,
-          updated_at: new Date(),
-        }
-
-        const { error } = await this.$supabase
-          .from('customers')
-          .upsert(updates, {
-            returning: 'minimal', // Don't return the value after inserting
-          })
-
-        if (error) throw error
-      } catch (error) {
-        alert(error.message)
-      } finally {
-        this.loading = false
-      }
+  props: {
+    customer: {
+      type: Object,
+      required: true,
+      default: null,
     },
   },
+  mounted() {
+    console.log(this.customer, 'customer')
+  },
+  methods: {},
 }
 </script>

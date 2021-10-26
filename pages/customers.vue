@@ -2,10 +2,13 @@
 <template>
   <div class="flex flex-wrap h-full">
     <div class="w-full px-6 py-6 bg-white lg:w-8/12 rounded-3xl">
-      <CustomerList :customers="customers" />
+      <CustomerList
+        :customers="customers"
+        @updateCustomer="updateCustomer($event)"
+      />
     </div>
     <div class="w-full h-full mt-8 lg:mt-0 lg:w-4/12 lg:pl-4">
-      <CustomerCrud />
+      <CustomerCrud :customer="customer" />
     </div>
   </div>
 </template>
@@ -22,11 +25,15 @@ export default {
   data: () => ({
     loading: true,
     customers: [],
+    customer: {},
   }),
   mounted() {
     this.getCustomers()
   },
   methods: {
+    updateCustomer(customer) {
+      this.customer = customer
+    },
     async getCustomers() {
       try {
         this.loading = true
@@ -35,7 +42,6 @@ export default {
           .from('customers')
           .select(`id,name,email,phone,address`)
 
-        console.log('ici')
         if (error && status !== 406) throw error
 
         if (data) {
