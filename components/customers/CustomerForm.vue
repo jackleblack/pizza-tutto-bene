@@ -8,7 +8,7 @@
       <div class="mt-1">
         <input
           id="name"
-          v-model="name"
+          v-model="form.name"
           type="text"
           name="name"
           class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -24,7 +24,7 @@
       <div class="mt-1">
         <input
           id="phone"
-          v-model="phone"
+          v-model="form.phone"
           type="tel"
           name="phone"
           class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -40,7 +40,7 @@
       <div class="mt-1">
         <input
           id="address"
-          v-model="address"
+          v-model="form.address"
           type="text"
           name="address"
           class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -56,7 +56,7 @@
       <div class="mt-1">
         <input
           id="email"
-          v-model="email"
+          v-model="form.email"
           type="email"
           name="email"
           class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -83,6 +83,14 @@
 </template>
 
 <script>
+// outside of the component:
+function initialState() {
+  return {
+    loading: false,
+    form: { name: '', phone: '', address: '', email: '' },
+  }
+}
+
 export default {
   name: 'CustomerForm',
   props: {
@@ -92,46 +100,23 @@ export default {
     },
   },
 
-  data: () => ({
-    loading: false,
-    id: null,
-    name: '',
-    phone: '',
-    address: '',
-    email: '',
-  }),
+  data: () => initialState(),
   watch: {
     customer() {
-      this.id = this.$props.customer.id
-      this.name = this.$props.customer.name
-      this.phone = this.$props.customer.phone
-      this.address = this.$props.customer.address
-      this.email = this.$props.customer.email
+      this.form = this.$props.customer
     },
   },
-  mounted() {
-    console.log(this.customer.name, 'customer2')
-  },
   methods: {
+    resetForm() {
+      Object.assign(this.$data, initialState())
+    },
     async updateCustomer() {
       try {
         this.loading = true
 
-        const updates = {
-          name: this.name,
-          phone: this.phone,
-          address: this.address,
-          email: this.email,
-        }
-
-        // Update mode
-        if (this.id) {
-          updates.id = this.id
-        }
-
         const { error } = await this.$supabase
           .from('customers')
-          .upsert(updates, {
+          .upsert(this.form, {
             returning: 'minimal', // Don't return the value after inserting
           })
 
@@ -144,10 +129,11 @@ export default {
         })
       } finally {
         this.loading = false
+        this.resetForm()
         this.$toast.show({
           type: 'success',
           title: 'Bravo !',
-          message: this.id ? 'Mise à jour réussie' : 'Ajout réussie',
+          message: 'Ajout réussie',
         })
       }
     },

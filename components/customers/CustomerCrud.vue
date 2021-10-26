@@ -6,12 +6,13 @@
       <div class="space-x-3">
         <span
           class="px-3 py-2 text-white rounded-md cursor-pointer  bg-golden-400 hover:bg-golden-300"
+          @click="onNewCustomer"
           >Nouveau</span
         >
       </div>
     </div>
     <div class="flex flex-col justify-between h-full">
-      <CustomerForm :customer="customer" />
+      <CustomerForm ref="customerFormRef" :customer="customer" />
     </div>
   </div>
 </template>
@@ -31,9 +32,10 @@ export default {
       default: null,
     },
   },
-  mounted() {
-    console.log(this.customer, 'customer')
+  methods: {
+    onNewCustomer() {
+      this.$refs.customerFormRef.resetForm()
+    },
   },
-  methods: {},
 }
 </script>
