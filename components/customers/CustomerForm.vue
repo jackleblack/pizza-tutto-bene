@@ -12,7 +12,6 @@
           type="text"
           name="name"
           class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          placeholder="Zinedine Zidane"
         />
       </div>
     </div>
@@ -28,7 +27,6 @@
           type="tel"
           name="phone"
           class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          placeholder="0765547382"
         />
       </div>
     </div>
@@ -44,7 +42,6 @@
           type="text"
           name="address"
           class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          placeholder="La canebière MaRSEILLE"
         />
       </div>
     </div>
@@ -60,7 +57,6 @@
           type="email"
           name="email"
           class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          placeholder="zz@example.com"
         />
       </div>
     </div>

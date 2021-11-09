@@ -1,5 +1,3 @@
-import shop from '../api/shop'
-
 export const state = () => ({
   items: [],
   cart: [],
@@ -32,8 +30,13 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit({ commit }) {
-    const items = await shop.getItems()
-    await commit('setItems', items)
+    const { data } = await this.$supabase
+      .from('products')
+      .select(
+        `id, title, description, category,product_variants(id, title, price)`
+      )
+
+    await commit('setItems', data)
   },
   async addToCard({ state, commit }, { item, price, variant }) {
     const key = item.slug + '-' + variant
@@ -60,7 +63,7 @@ export const actions = {
 
 export const getters = {
   getItems(state) {
-    return state.items.map((item) => ({ ...item, slug: slugify(item.name) }))
+    return state.items?.map((item) => ({ ...item, slug: slugify(item.title) }))
   },
   getCart(state) {
     return state.cart

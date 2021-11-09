@@ -6,7 +6,7 @@
       class="flex flex-row items-center justify-between mb-4"
     >
       <div class="flex flex-row items-center w-2/5">
-        <span class="text-sm font-semibold">{{ item.name }}</span>
+        <span class="text-sm font-semibold">{{ item.title }}</span>
         <span class="ml-2 text-xs">{{ item.variant }}</span>
       </div>
       <div class="flex justify-between w-32">

@@ -1,12 +1,12 @@
 <template>
   <div>
     <ItemFilter
-      :filter-type="filterType"
-      :item-types="itemTypes"
-      @updateFilterType="updateFilterType($event)"
+      :filter-category="filterCategory"
+      :item-categories="itemCategories"
+      @updateFilterCategory="updateFilterCategory($event)"
     />
     <!-- products -->
-    <ItemList :items="itemByType" />
+    <ItemList :items="itemByCategory" />
     <!-- end products -->
   </div>
 </template>
@@ -26,23 +26,25 @@ export default {
   },
   data() {
     return {
-      filterType: 'all',
+      filterCategory: 'all',
     }
   },
   computed: {
-    itemTypes() {
-      // Get unique itemTypes
-      return [...new Set(this.items.map((item) => item.type))]
+    itemCategories() {
+      console.table(this.items)
+      // Get unique itemCategorys
+      return [...new Set(this.items?.map((item) => item.category))]
     },
-    itemByType() {
-      return this.items.filter(
-        (item) => this.filterType === 'all' || item.type === this.filterType
+    itemByCategory() {
+      return this.items?.filter(
+        (item) =>
+          this.filterCategory === 'all' || item.category === this.filterCategory
       )
     },
   },
   methods: {
-    updateFilterType(type) {
-      this.filterType = type
+    updateFilterCategory(category) {
+      this.filterCategory = category
     },
   },
 }

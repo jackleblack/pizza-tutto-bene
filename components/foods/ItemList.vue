@@ -12,12 +12,9 @@
         <div class="flex-1 truncate">
           <div class="flex items-center space-x-3">
             <h3 class="text-sm font-medium text-gray-900 truncate">
-              {{ item.name }}
+              {{ item.title }}
             </h3>
           </div>
-          <p class="mt-1 text-sm text-gray-500 truncate">
-            {{ item.title }}
-          </p>
           <p class="mt-1 text-xs text-gray-500 truncate">
             {{ item.description || '🔥' }}
           </p>
@@ -26,30 +23,16 @@
       <div>
         <div class="flex -mt-px divide-x divide-gray-200">
           <div
-            v-for="(price, variant) in item.prices"
-            :key="variant"
+            v-for="product_variant in item.product_variants"
+            :key="product_variant.id"
             class="flex flex-1 w-0 cursor-pointer hover:bg-gray-100"
-            @click="addToCart(item, price, variant)"
+            @click="addToCart(item, price, product_variant)"
           >
             <a
-              class="
-                relative
-                flex flex-col
-                items-center
-                justify-center
-                flex-1
-                w-0
-                py-4
-                -mr-px
-                text-sm
-                font-medium
-                text-gray-700
-                border border-transparent
-                rounded-bl-lg
-              "
+              class="relative flex flex-col items-center justify-center flex-1 w-0 py-4 -mr-px text-sm font-medium text-gray-700 border border-transparent rounded-bl-lg "
             >
-              <span class="text-xs">{{ variant }}</span>
-              <span class="text-golden">{{ price }}</span>
+              <span class="text-xs">{{ product_variant.title }}</span>
+              <span class="text-golden">{{ product_variant.name }}</span>
             </a>
           </div>
         </div>

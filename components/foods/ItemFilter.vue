@@ -9,23 +9,23 @@
         class="px-5 py-1 mr-4 text-sm font-semibold cursor-pointer  rounded-2xl bg-gradient-to-r hover:from-golden to-golden-light hover:text-white"
         :class="{
           'bg-gradient-to-r  from-golden to-golden-light text-white':
-            'all' === filterType,
+            'all' === filterCategory,
         }"
-        @click="updateFilterType('all')"
+        @click="updateFilterCategory('all')"
       >
         Tous
       </span>
       <span
-        v-for="itemType in itemTypes"
-        :key="itemType"
+        v-for="itemCategory in itemCategories"
+        :key="itemCategory"
         class="px-4 py-1 mr-4 text-sm font-semibold cursor-pointer  rounded-2xl bg-gradient-to-r hover:from-golden to-golden-light hover:text-white"
         :class="{
           'bg-gradient-to-r  from-golden to-golden-light text-white':
-            itemType === filterType,
+            itemCategory === filterCategory,
         }"
-        @click="updateFilterType(itemType)"
+        @click="updateFilterCategory(itemCategory)"
       >
-        {{ itemType }}
+        {{ itemCategory }}
       </span>
     </div>
   </div>
@@ -35,18 +35,18 @@
 export default {
   name: 'ItemFilter',
   props: {
-    filterType: {
+    filterCategory: {
       type: String,
       required: true,
     },
-    itemTypes: {
+    itemCategories: {
       type: Array,
       required: true,
     },
   },
   methods: {
-    updateFilterType(type) {
-      this.$emit('updateFilterType', type)
+    updateFilterCategory(category) {
+      this.$emit('updateFilterCategory', category)
     },
   },
 }

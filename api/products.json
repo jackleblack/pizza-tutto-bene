@@ -553,19 +553,25 @@
     "name": "Tiramisu Nutella",
     "type": "Dessert",
     "description": "2 personnes",
-    "prices": "5.50"
+    "prices": {
+      "standard": "5.50"
+    }
   },
   {
     "name": "Cheesecake",
     "type": "Dessert",
     "description": "",
-    "prices": "3"
+    "prices": {
+      "standard": "5.50"
+    }
   },
   {
     "name": "Tarte au Daim",
     "type": "Dessert",
     "description": "Rosé",
-    "prices": "3"
+    "prices": {
+      "standard": "3"
+    }
   },
   {
     "name": "Sodas",
@@ -589,6 +595,8 @@
     "name": "Bière La Cagole",
     "type": "Boissons",
     "description": "Bière du cabanon",
-    "prices": "3"
+    "prices": {
+      "standard": "3"
+    }
   }
 ]
