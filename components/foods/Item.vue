@@ -31,7 +31,6 @@ export default {
   },
   computed: {
     itemCategories() {
-      console.table(this.items)
       // Get unique itemCategorys
       return [...new Set(this.items?.map((item) => item.category))]
     },

@@ -10,19 +10,16 @@ export const mutations = {
   setCart(state, data) {
     state.cart = data
   },
-  pushProductToCart(state, { key, variant, price, item }) {
-    state.cart.push({ ...item, key, variant, price, quantity: 1 })
+  pushProductToCart(state, { item, variant }) {
+    state.cart.push({ ...item, variant, quantity: 1 })
   },
-  incrementItemQuantity(state, { key }) {
-    const cartItem = state.cart.find((item) => item.key === key)
-    cartItem.quantity++
+  incrementItemQuantity(state, item) {
+    item.quantity++
   },
-  decrementItemQuantity(state, { key }) {
-    const cartItem = state.cart.find((item) => item.key === key)
-    if (cartItem.quantity > 1) {
-      cartItem.quantity--
+  decrementItemQuantity(state, { item, index }) {
+    if (item.quantity > 1) {
+      item.quantity--
     } else {
-      const index = state.cart.findIndex((item) => item.key === key)
       state.cart.splice(index, 1)
     }
   },
@@ -38,22 +35,15 @@ export const actions = {
 
     await commit('setItems', data)
   },
-  async addToCard({ state, commit }, { item, price, variant }) {
-    const key = item.slug + '-' + variant
-    const cartItem = state.cart.find((item) => item.key === key)
-    if (!cartItem) {
-      await commit('pushProductToCart', { key, variant, price, item })
-    } else {
-      await commit('incrementItemQuantity', cartItem)
-    }
+  async addToCard({ state, commit }, { item, variant }) {
+    await commit('pushProductToCart', { item, variant })
   },
-  async changeItemQuantity({ state, commit }, { itemFromCart, quantity }) {
-    const cartItem = state.cart.find((item) => item.key === itemFromCart.key)
-
+  async changeItemQuantity({ state, commit }, { index, quantity }) {
+    const item = state.cart[index]
     if (quantity > 0) {
-      await commit('incrementItemQuantity', cartItem)
+      await commit('incrementItemQuantity', item)
     } else {
-      await commit('decrementItemQuantity', cartItem)
+      await commit('decrementItemQuantity', { item, index })
     }
   },
   async resetCart({ state, commit }) {
@@ -75,7 +65,7 @@ export const getters = {
   },
   getTotalPrice: (state, getters) => {
     return getters.getCart.reduce((total, item) => {
-      return total + item.price * item.quantity
+      return total + item.variant.price * item.quantity
     }, 0)
   },
 }
