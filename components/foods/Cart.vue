@@ -51,7 +51,7 @@
         <!-- button pay-->
         <div class="px-5 mt-5">
           <div
-            class="px-4 py-4 font-semibold text-center text-white rounded-md shadow-lg  bg-gradient-to-r from-golden to-golden-light"
+            class="px-4 py-4 font-semibold text-center text-white rounded-md shadow-lg cursor-pointer  bg-gradient-to-r from-golden to-golden-light"
           >
             Valider le panier
           </div>

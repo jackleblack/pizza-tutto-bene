@@ -5,7 +5,7 @@
   >
     <li
       v-for="item in items"
-      :key="item.slug"
+      :key="item.id"
       class="col-span-1 bg-white divide-y divide-gray-200 rounded-lg shadow"
     >
       <div class="flex items-center justify-between w-full p-6 space-x-6">
@@ -31,8 +31,9 @@
             <a
               class="relative flex flex-col items-center justify-center flex-1 w-0 py-4 -mr-px text-sm font-medium text-gray-700 border border-transparent rounded-bl-lg "
             >
-              <span class="text-xs">{{ variant.title }}</span>
-              <span class="text-golden">{{ variant.name }}</span>
+              <BadgeVariant :variant="variant">{{
+                variant.price
+              }}</BadgeVariant>
             </a>
           </div>
         </div>
@@ -42,13 +43,25 @@
 </template>
 
 <script>
+import BadgeVariant from '../common/BadgeVariant'
+
 export default {
   name: 'ItemList',
+  components: { BadgeVariant },
   props: {
     items: {
       type: Array,
       required: true,
     },
+  },
+  data() {
+    return {
+      variantClassname: {
+        solo: 'bg-green-500 text-green-100',
+        standard: 'bg-golden-400 text-golden-100',
+        maxi: 'bg-red-500 text-red-100',
+      },
+    }
   },
   methods: {
     addToCart(item, variant) {

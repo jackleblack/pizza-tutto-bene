@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'CustomerForm',
+  name: 'Input',
   props: {
     label: { type: Object, required: true },
     name: { type: Object, required: true },

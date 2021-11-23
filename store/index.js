@@ -53,7 +53,7 @@ export const actions = {
 
 export const getters = {
   getItems(state) {
-    return state.items?.map((item) => ({ ...item, slug: slugify(item.title) }))
+    return state.items?.map((item) => ({ ...item }))
   },
   getCart(state) {
     return state.cart
@@ -69,14 +69,3 @@ export const getters = {
     }, 0)
   },
 }
-
-const slugify = (text) =>
-  text
-    .toString()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036F]/g, '')
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w-]+/g, '')
-    .replace(/--+/g, '-')

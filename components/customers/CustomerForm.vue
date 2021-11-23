@@ -110,12 +110,18 @@ export default {
       try {
         this.loading = true
 
-        const { error } = await this.$supabase
+        const { data, error } = await this.$supabase
           .from('customers')
-          .upsert(this.form, {
-            returning: 'minimal', // Don't return the value after inserting
-          })
+          .upsert(this.form)
 
+        if (data) {
+          this.$emit('onCustomerAdded', data)
+          this.$toast.show({
+            type: 'success',
+            title: 'Bravo !',
+            message: 'Ajout réussie',
+          })
+        }
         if (error) throw error
       } catch (error) {
         this.$toast.show({
@@ -126,11 +132,6 @@ export default {
       } finally {
         this.loading = false
         this.resetForm()
-        this.$toast.show({
-          type: 'success',
-          title: 'Bravo !',
-          message: 'Ajout réussie',
-        })
       }
     },
   },

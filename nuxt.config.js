@@ -27,7 +27,11 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~plugins/client.js' }],
+  plugins: [
+    { src: '~plugins/client.js' },
+    '~plugins/vue-js-modal.js',
+    '~plugins/vue-select.js',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

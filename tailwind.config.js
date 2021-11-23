@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: [
     './pages/**/*.{js,vue}',
@@ -21,6 +23,22 @@ module.exports = {
           700: '#72542B',
           800: '#4D391D',
           900: '#281D0F',
+        },
+        variant: {
+          solo: colors.green,
+          standard: {
+            50: '#F9F5EF',
+            100: '#F2E9DD',
+            200: '#E4D1B8',
+            300: '#D6BA93',
+            400: '#C8A26E',
+            500: '#BA8A49',
+            600: '#976F39',
+            700: '#72542B',
+            800: '#4D391D',
+            900: '#281D0F',
+          },
+          maxi: colors.red,
         },
       },
     },
